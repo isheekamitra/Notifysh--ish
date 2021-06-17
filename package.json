@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
    
-    "start": "nodemon server.js",
+    "start": "node server.js",
     "server":"nodemon server.js",
     "notify":"cd notify && npm run start",
     "server-install":"npm install",
