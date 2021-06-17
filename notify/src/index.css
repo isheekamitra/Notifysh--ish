@@ -1,0 +1,239 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+#theme{
+  display: none;
+}
+#theme:checked ~ *{
+ filter: invert(1);
+}
+.App{
+  
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f1f1f1;
+}
+.main{
+  max-width: 1000px;
+  width: 100%;
+  min-height: 100vh;
+  margin: auto;
+}
+img {
+  object-fit: cover;
+}
+/*Error*/
+#notfound{
+  position: relative;
+  height: 100vh;
+}
+#notfound .notfound{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+ transform: translate(-50%,-50%);
+}
+.navbar-light {
+
+  padding: 0px;
+  margin-top: 5px;
+}
+.notfound{
+  max-width: 920px;
+  width: 100%;
+  line-height: 1.4;
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.notfound .notfound-404{
+  position: absolute;
+  height: 100px;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: -1;
+}
+.notfound .notfound-404 h1{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(233, 230, 230);
+  font-weight: 900;
+  font-size: 276px;
+  margin: 0px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+.notfound h2{
+  font-size: 46px;
+  color: black;
+  background-color: transparent;
+font-weight: 900;
+text-transform: uppercase;
+margin: 0;
+}
+.notfound p{
+  font-size: 16px;
+  color: black;
+  font-weight: 400;
+  background-color: transparent;
+  text-transform: uppercase;
+  margin-top: 15px;
+}
+.notfound a{
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: rgb(3, 116, 192);
+  display: inline-block;
+  padding: 10px 30px;
+  border: 2px solid transparent;
+  border-radius: 40px;
+  color: white;
+  font-weight: 400;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+.notfound a:hover{
+  background-color: white;
+  border-color: rgb(3, 116, 192);
+  color:rgb(3, 116, 192);
+}
+.texty{
+  font-weight: 700;
+}
+.text_feild{
+  color: rgb(1, 91, 133);
+}
+.input{
+  outline: none;
+  border: 1px dashed gray;
+  padding: 2px;
+  margin-bottom: 10px;
+}
+.avatar{
+    width: 30px; 
+    height: 30px;
+    border-radius: 50%;
+    /* object-fit: contain; */
+}
+@media only screen and (max-width:640px){
+  
+  .notfound .notfound-404 h1{
+    font-size: 170px;
+  }
+  .notfound h2{
+    font-size: 22px;
+  }
+  .notfound p{
+    font-size: 13px;
+  }
+.text_feild{
+   max-width: 300px;
+  }
+}
+
+/*----AUTH----*/
+@import url('./styles/auth.css');
+
+
+/*----LOADING----*/
+@import url('./styles/loading.css');
+
+
+/*----HEADER----*/
+@import url('./styles/header.css');
+
+
+/*----PROFILE----*/
+@import url('./styles/profile.css');
+
+
+/*----HOME----*/
+@import url('./styles/home.css');
+
+/*----STATUS-MODEL----*/
+@import url('./styles/statusmodel.css');
+
+/*----HEADER-RESPONSIVE----*/
+@media (max-width:766px){
+  .header .navbar .logo{
+    display: none;
+  }
+  .header .menu{
+      
+      width: 100%;
+      height: 40px;
+     
+  }
+  .header .menu .navbar-nav{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+  }
+  
+  .header .search_form{
+      width: 100%;
+  }
+  .header .logo{
+      margin: auto;
+      font-size: 1rem;
+  }
+  .header .logo h1{
+      font-size: 1.5rem;
+  }
+  .message{
+    height: calc(100vh - 100px);
+  }
+  .right_mess,
+  .left_mess{
+    display: none;
+  }
+  .status{
+    padding: 20px 10px;
+  }
+}
+
+.mode{
+  width: 100%;
+ height: 100h;
+ overflow: hidden;
+}
+
+
+/*----COMMENT----*/
+@import url('./styles/comment.css');
+
+
+/*----POST_THUMB----*/
+@import url('./styles/post_thumb.css');
+
+
+/* -------- Message---------- */
+@import url("./styles/message.css");
+
+/* -------- icons---------- */
+@import url("./styles/Icons.css");
+
+/* --------callmodal---------- */
+@import url("./styles/call_modal.css");
