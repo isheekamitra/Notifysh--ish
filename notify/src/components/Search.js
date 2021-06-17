@@ -38,7 +38,7 @@ const Search = () => {
                 
              </div>
              
-            <div className="close_search" onClick={handleClose}
+            <div className="close_search" onClick={handleclose}
             style={{opacity: users.length === 0 ? 0 : 1}} >
                 &times;
             </div>
