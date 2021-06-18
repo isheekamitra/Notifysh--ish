@@ -9,7 +9,7 @@ const {auth} = useSelector(state=>state)
             <div className="follow_box">
              <h5 className="text-center">Followers</h5>
              <hr/>
-
+             <div className="follow_content">
              {
                   users.map(user=>(
                       <Usercard
@@ -21,6 +21,7 @@ const {auth} = useSelector(state=>state)
                       </Usercard>
                   ))
              }
+             </div>
              <div className="close" onClick={()=>setshowfollowers(false)}>
              &times;
 

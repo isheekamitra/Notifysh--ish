@@ -20,7 +20,7 @@ const Notifymodel = () => {
         }
     }
     return (
-        <div style={{minWidth:'280px'}}>
+        <div style={{minWidth:'300px'}}>
             <div className='d-flex justify-content-between align-items-center px-3'>
                 <h3>Notification</h3>
                 {
@@ -58,10 +58,17 @@ const Notifymodel = () => {
                          </div>
                          {msg.content && <small>{msg.content.slice(0,20)}...</small>}
                      </div>
-                     <div style={{width:'30px'}}>
-                         {msg.image &&  <img src={msg.image} alt="avatar" className="avatar"
+                     {
+                         msg.image &&
+                         <div style={{width:'30px'}}>
+                         {msg.image.match(/video/i)
+                          ?  <video src={msg.image} width="100%"></video>
+                         : <img src={msg.image} alt="avatar" className="avatar"
                             style={{filter:theme?'invert(1)':'invert(0)'}}></img> }
                      </div>
+
+                     }
+                    
                       </Link>
                       <small className='text-muted d-flex justify-content-between px-2'>
                           {moment(msg.createdAt).fromNow()}
