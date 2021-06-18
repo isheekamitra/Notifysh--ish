@@ -46,9 +46,10 @@ const Search = () => {
 
                {load && <img className="loading" src="https://thumbs.gfycat.com/SkinnySeveralAsianlion-max-1mb.gif"  alt="load"></img>}
            
-             <div className="users">
-                 {
-                     search && users.map(user=>(
+            {  search &&
+               <div className="users">
+                 
+                 {    users.map(user=>(
                         
                     <Usercard 
                     key={user._id} 
@@ -58,7 +59,8 @@ const Search = () => {
                      />
                      ))
                  }
-             </div>
+                  </div>
+            }
         </form>
     );
 }
