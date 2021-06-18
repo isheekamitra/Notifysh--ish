@@ -4,12 +4,11 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-   
     "start": "node server.js",
-    "server":"nodemon server.js",
-    "notify":"cd notify && npm run start",
-    "server-install":"npm install",
-    "notify-install":"cd notify && npm install",
+    "server": "nodemon server.js",
+    "notify": "cd notify && npm run start",
+    "server-install": "npm install",
+    "notify-install": "cd notify && npm install",
     "install-all": "concurrently \"npm run server-install\" \"npm run notify-install\" ",
     "dev": "concurrently \"npm run server\" \"npm run notify\" ",
     "heroku-postbuild": "cd notify && npm install && npm run build"
